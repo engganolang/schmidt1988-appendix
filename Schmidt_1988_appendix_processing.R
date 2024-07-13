@@ -1,7 +1,9 @@
 library(googlesheets4)
 library(tidyverse)
 
-schmidt_app <- googlesheets4::read_sheet("https://docs.google.com/spreadsheets/d/1H9j7DL8Er8B8QkKdAsnnqjYBJi18bVaaKjtIYA3i9Zk/edit?usp=sharing", sheet = 1, col_types = "icccccccccc")
+source("Schmidt_1988_gsheet.R")
+
+schmidt_app <- googlesheets4::read_sheet(schmidt_sheet, sheet = 1, col_types = "icccccccccc")
 schmidt_app
 
 # footnote 143 from Schmidt's (1988) English translation (p. 28 in the translation):
@@ -29,3 +31,6 @@ main_df1 <- main_df %>%
 	mutate(across(matches("form|variant|crossref"), ~str_replace_all(., "'", "ˈ"))) %>% 
 	mutate(across(matches("form|variant|crossref"), ~str_replace_all(., "ʔ", "ˀ"))) %>% 
 	mutate(across(matches("form|variant|crossref"), ~str_replace_all(., ":", "ː")))
+main_df1 %>% 
+	mutate(across(where(is.character), ~replace_na(., ""))) %>%
+	write_tsv("Schmidt_1988_appendix.tsv")
