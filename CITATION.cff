@@ -1,0 +1,41 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: >-
+  The digitised dataset derived from the appendix in
+  Schmidt's "Der Lautwandel im Enggano während der letzten
+  50 Jahre" from 1988.
+message: >-
+  If you use this dataset, please cite it using the metadata
+  from this file.
+type: dataset
+authors:
+  - given-names: Hans
+    family-names: Schmidt
+    affiliation: University of Hamburg
+  - given-names: Gede Primahadi Wijaya
+    family-names: Rajeg
+    email: primahadi_wijaya@unud.ac.id
+    affiliation: University of Oxford & Udayana University
+    orcid: 'https://orcid.org/0000-0002-2047-8621'
+identifiers:
+  - type: url
+    value: 'https://github.com/engganolang/schmidt1988-appendix'
+    description: GitHub repository
+url: 'https://enggano.ling-phil.ox.ac.uk'
+abstract: >-
+  This appendix compares the Enggano forms in 1937 and 1986.
+  The second author digitised it into computer-readable, and
+  searchable format.
+keywords:
+  - Enggano
+  - Hans Kähler
+  - Bernd Nothofer
+  - Austronesian
+  - Enggano language
+  - lexical data
+  - lexical comparison
+license: CC-BY-NC-SA-4.0
+version: 1.0.0
+date-released: '2024-07-13'
